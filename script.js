@@ -190,3 +190,117 @@ if (compareSlider && beforeLayer && sliderLine) {
     sliderLine.style.left = value + "%";
   });
 }
+function calculateROI() {
+  const visitors = Number(document.getElementById("visitors").value);
+  const clientValue = Number(document.getElementById("clientValue").value);
+  const currentRate = Number(document.getElementById("currentRate").value);
+  const improvedRate = Number(document.getElementById("improvedRate").value);
+
+  if (!visitors || !clientValue || !currentRate || !improvedRate) {
+    alert("Please complete all fields.");
+    return;
+  }
+
+  const currentClients = visitors * (currentRate / 100);
+  const improvedClients = visitors * (improvedRate / 100);
+  const extraClients = improvedClients - currentClients;
+
+  const monthlyExtraRevenue = extraClients * clientValue;
+  const yearlyExtraRevenue = monthlyExtraRevenue * 12;
+
+  document.getElementById("roiRevenue").textContent = `€${Math.round(yearlyExtraRevenue).toLocaleString()}/year`;
+  document.getElementById("monthlyRevenue").textContent = `Additional monthly revenue: €${Math.round(monthlyExtraRevenue).toLocaleString()}`;
+  document.getElementById("extraClients").textContent = `Extra clients per month: ${Math.round(extraClients)}`;
+
+  document.getElementById("roiMessage").textContent =
+    "A better website can turn the same traffic into more clients without increasing your advertising budget.";
+}
+function generateWebsitePlan() {
+  const name = document.getElementById("plannerName").value.trim() || "Your Business";
+  const type = document.getElementById("plannerType").value;
+  const goal = document.getElementById("plannerGoal").value;
+  const budget = document.getElementById("plannerBudget").value;
+
+  let pages = ["Home", "About", "Services", "Reviews", "Contact"];
+  let features = ["Responsive Design", "Contact Form", "SEO Structure", "Fast Loading Speed"];
+  let packageName = "Business Website";
+
+  if (type === "restaurant") {
+    pages = ["Home", "Menu", "Gallery", "Reservations", "Reviews", "Contact"];
+    features.push("Online Reservation", "Menu Section", "Location Map");
+  }
+
+  if (type === "beauty") {
+    pages = ["Home", "Services", "Prices", "Portfolio", "Booking", "Reviews", "Contact"];
+    features.push("Booking Form", "Gallery", "Instagram Integration");
+  }
+
+  if (type === "medical") {
+    pages = ["Home", "Doctors", "Services", "Appointments", "FAQ", "Contact"];
+    features.push("Appointment Form", "Trust Section", "FAQ");
+  }
+
+  if (type === "store") {
+    pages = ["Home", "Shop", "Product Pages", "Cart", "Checkout", "Contact"];
+    features.push("Online Payments", "Product Catalog", "Order Management");
+    packageName = "Online Store";
+  }
+
+  if (type === "realestate") {
+    pages = ["Home", "Properties", "Property Details", "About", "Contact"];
+    features.push("Property Listings", "Lead Form", "Search Filters");
+  }
+
+  if (type === "construction") {
+    pages = ["Home", "Projects", "Services", "Process", "Testimonials", "Contact"];
+    features.push("Project Gallery", "Before / After Section", "Lead Form");
+  }
+
+  if (type === "personal") {
+    pages = ["Home", "About", "Portfolio", "Media", "Contact"];
+    features.push("Personal Branding", "Portfolio Showcase", "Social Links");
+  }
+
+  if (goal === "sell") {
+    features.push("Sales-Focused Layout");
+  }
+
+  if (goal === "booking") {
+    features.push("Booking Strategy");
+  }
+
+  if (goal === "premium") {
+    features.push("Luxury Visual Identity");
+  }
+
+  let timeline = "7 - 14 days";
+
+  if (budget === "premium") {
+    timeline = "14 - 30 days";
+    features.push("Advanced UI/UX", "SEO Optimization", "Analytics Setup");
+  }
+
+  document.getElementById("plannerTitle").textContent = `${name} Website Plan`;
+
+  document.getElementById("plannerContent").innerHTML = `
+    <div class="plan-card">
+      <h3>Recommended Package</h3>
+      <p>${packageName}</p>
+    </div>
+
+    <div class="plan-card">
+      <h3>Suggested Pages</h3>
+      <ul>${pages.map(page => `<li>${page}</li>`).join("")}</ul>
+    </div>
+
+    <div class="plan-card">
+      <h3>Recommended Features</h3>
+      <ul>${features.map(feature => `<li>${feature}</li>`).join("")}</ul>
+    </div>
+
+    <div class="plan-card">
+      <h3>Estimated Timeline</h3>
+      <p>${timeline}</p>
+    </div>
+  `;
+}

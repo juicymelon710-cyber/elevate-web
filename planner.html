@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI Website Planner | Elevate Web</title>
+  <meta name="description" content="Generate a personalized website strategy for your business with Elevate Web.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <span>EW</span>
+    <div>
+      <strong>Elevate Web</strong>
+      <small>Premium Digital Studio</small>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="resources.html">Resources</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="contact.html" class="nav-btn">Start Project</a>
+</header>
+
+<main>
+
+<section class="page-hero reveal">
+  <p class="label">AI Website Planner</p>
+  <h1>Generate a smart website plan for your business.</h1>
+  <p>
+    Answer a few questions and receive a personalized website structure,
+    recommended features and project direction.
+  </p>
+</section>
+
+<section class="section planner-section reveal">
+
+  <div class="planner-box">
+
+    <div class="planner-form">
+
+      <label>Business Name</label>
+      <input type="text" id="plannerName" placeholder="Example: Bella Beauty Studio">
+
+      <label>Business Type</label>
+      <select id="plannerType">
+        <option value="restaurant">Restaurant / Cafe</option>
+        <option value="beauty">Beauty Salon</option>
+        <option value="medical">Medical Clinic</option>
+        <option value="store">Online Store</option>
+        <option value="realestate">Real Estate Agency</option>
+        <option value="construction">Construction Company</option>
+        <option value="personal">Personal Brand</option>
+        <option value="other">Other Business</option>
+      </select>
+
+      <label>Main Goal</label>
+      <select id="plannerGoal">
+        <option value="clients">Get more clients</option>
+        <option value="trust">Build trust</option>
+        <option value="sell">Sell products online</option>
+        <option value="booking">Get bookings</option>
+        <option value="premium">Look more premium</option>
+      </select>
+
+      <label>Budget</label>
+      <select id="plannerBudget">
+        <option value="small">€150 - €300</option>
+        <option value="medium">€300 - €700</option>
+        <option value="premium">€800 - €2000+</option>
+      </select>
+
+      <button class="btn gold" onclick="generateWebsitePlan()">Generate Plan</button>
+
+    </div>
+
+    <div class="planner-result">
+      <p class="label">Your Smart Plan</p>
+      <h2 id="plannerTitle">Your website strategy will appear here.</h2>
+
+      <div id="plannerContent">
+        <p>
+          Complete the form and generate a personalized website plan for your business.
+        </p>
+      </div>
+
+      <a href="contact.html" class="btn outline">Start This Project</a>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div>
+    <h3>Elevate Web</h3>
+    <p>Premium websites for modern businesses.</p>
+  </div>
+
+  <div>
+    <p>Email: elevateweb26.1@gmail.com</p>
+    <p>Phone: 078443428</p>
+    <p>Location: Moldova / Worldwide</p>
+  </div>
+
+  <div>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
