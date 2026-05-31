@@ -1358,3 +1358,35 @@ main .cta .btn {
   position: static !important;
   margin-top: 6px !important;
 }
+
+.contact-cta {
+  padding: 50px 8% 60px;
+  text-align: center;
+}
+
+.contact-cta h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 42px;
+  line-height: 1.2;
+  max-width: 750px;
+  margin: 0 auto 20px;
+  color: #F8F5EE;
+}
+
+.contact-cta p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+  color: #D4AF37;
+}
+
+@media (max-width: 700px) {
+  .contact-cta h2 {
+    font-size: 30px;
+  }
+
+  .contact-cta p {
+    font-size: 16px;
+  }
+}
