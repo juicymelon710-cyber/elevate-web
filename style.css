@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+:root{
+  --nav-height:80px;
+}
+
 html{
   scroll-behavior:smooth;
 }
@@ -69,6 +73,13 @@ body{
   backdrop-filter:blur(20px);
   background:rgba(7,18,37,0.5);
   border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.nav-spacer{
+  height:var(--nav-height);
+  min-height:var(--nav-height);
+  width:100%;
+  display:block;
 }
 
 .logo{
@@ -186,11 +197,15 @@ nav a:hover{
 }
 
 .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:18px 34px;
   border-radius:40px;
   text-decoration:none;
   transition:0.3s;
   font-weight:600;
+  line-height:1;
 }
 
 .gold{
@@ -1281,20 +1296,28 @@ footer a{
 .cta {
   padding: 80px 8% 70px !important;
   min-height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 28px !important;
 }
 
 .cta h2 {
   font-size: 2.4rem !important;
   line-height: 1.2 !important;
   max-width: 650px !important;
-  margin: 0 auto 25px !important;
+  margin: 0 auto !important;
 }
 
 .cta p {
   font-size: 1rem !important;
   line-height: 1.6 !important;
   max-width: 600px !important;
-  margin: 0 auto 30px !important;
+  margin: 0 auto !important;
+}
+
+.cta .btn {
+  margin-top: 6px;
 }
 
 footer {
@@ -1312,67 +1335,26 @@ footer {
     font-size: 0.95rem !important;
   }
 }
-/* FINAL CONTACT CTA FIX */
-.cta {
-  padding: 60px 8% 70px !important;
-  text-align: center !important;
-  border: none !important;
-  box-shadow: none !important;
+
+/* Cache-busted final CTA layout guard */
+main .cta {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  row-gap: 28px !important;
 }
 
-.cta h2 {
-  font-size: 42px !important;
-  line-height: 1.2 !important;
-  max-width: 700px !important;
-  margin: 0 auto 20px !important;
-  border: none !important;
+main .cta h2,
+main .cta p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
-.cta p {
-  font-size: 18px !important;
-  line-height: 1.6 !important;
-  max-width: 650px !important;
-  margin: 0 auto !important;
-  color: #D4AF37 !important;
+main .cta p {
+  color: #c8c8c8 !important;
 }
 
-@media (max-width: 700px) {
-  .cta h2 {
-    font-size: 30px !important;
-  }
-
-  .cta p {
-    font-size: 16px !important;
-  }
-}
-.contact-cta {
-  padding: 50px 8% 60px;
-  text-align: center;
-}
-
-.contact-cta h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 42px;
-  line-height: 1.2;
-  max-width: 750px;
-  margin: 0 auto 20px;
-  color: #F8F5EE;
-}
-
-.contact-cta p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 650px;
-  margin: 0 auto;
-  color: #D4AF37;
-}
-
-@media (max-width: 700px) {
-  .contact-cta h2 {
-    font-size: 30px;
-  }
-
-  .contact-cta p {
-    font-size: 16px;
-  }
+main .cta .btn {
+  position: static !important;
+  margin-top: 6px !important;
 }
