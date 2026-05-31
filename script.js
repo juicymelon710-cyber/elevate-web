@@ -179,3 +179,14 @@ function runAudit() {
 
   document.getElementById("auditMessage").textContent = message;
 }
+const compareSlider = document.getElementById("compareSlider");
+const beforeLayer = document.getElementById("beforeLayer");
+const sliderLine = document.getElementById("sliderLine");
+
+if (compareSlider && beforeLayer && sliderLine) {
+  compareSlider.addEventListener("input", function () {
+    const value = compareSlider.value;
+    beforeLayer.style.width = value + "%";
+    sliderLine.style.left = value + "%";
+  });
+}
