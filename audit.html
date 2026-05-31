@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Free Website Audit | Elevate Web</title>
+  <meta name="description" content="Get a free website score and discover how Elevate Web can improve your design, SEO and performance.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <span>EW</span>
+    <div>
+      <strong>Elevate Web</strong>
+      <small>Premium Digital Studio</small>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="estimator.html">Estimator</a>
+    <a href="audit.html">Free Audit</a>
+    <a href="before-after.html">Before / After</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="contact.html" class="nav-btn">Start Project</a>
+</header>
+
+<main>
+
+<section class="page-hero reveal">
+  <p class="label">Free Website Audit</p>
+  <h1>Check your website score instantly.</h1>
+  <p>
+    Enter your website link and receive an instant overview of your design, SEO, mobile experience and performance.
+  </p>
+</section>
+
+<section class="section audit-section reveal">
+
+  <div class="audit-box">
+
+    <div class="audit-form">
+      <label>Your Website URL</label>
+      <input type="text" id="websiteUrl" placeholder="https://yourwebsite.com">
+
+      <button class="btn gold" onclick="runAudit()">Analyze Website</button>
+
+      <p class="audit-note">
+        This is a quick preview audit. For a complete professional analysis, contact Elevate Web.
+      </p>
+    </div>
+
+    <div class="audit-results" id="auditResults">
+      <p class="label">Website Score</p>
+      <h2 id="totalScore">--/100</h2>
+
+      <div class="score-item">
+        <span>Design</span>
+        <div><strong id="designScore">--</strong>/100</div>
+      </div>
+
+      <div class="score-item">
+        <span>SEO</span>
+        <div><strong id="seoScore">--</strong>/100</div>
+      </div>
+
+      <div class="score-item">
+        <span>Mobile</span>
+        <div><strong id="mobileScore">--</strong>/100</div>
+      </div>
+
+      <div class="score-item">
+        <span>Speed</span>
+        <div><strong id="speedScore">--</strong>/100</div>
+      </div>
+
+      <p id="auditMessage">
+        Enter your website URL to generate a quick audit preview.
+      </p>
+
+      <a href="contact.html" class="btn outline">Get Full Audit</a>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div>
+    <h3>Elevate Web</h3>
+    <p>Premium websites for modern businesses.</p>
+  </div>
+
+  <div>
+    <p>Email: elevateweb26.1@gmail.com</p>
+    <p>Phone: 078443428</p>
+    <p>Location: Moldova / Worldwide</p>
+  </div>
+
+  <div>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

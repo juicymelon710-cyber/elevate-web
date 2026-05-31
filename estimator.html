@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Website Estimator | Elevate Web</title>
+  <meta name="description" content="Estimate the cost and timeline of your website project with Elevate Web.">
+
+  <link rel="stylesheet" href="style.css?v=3" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <span>EW</span>
+    <div>
+      <strong>Elevate Web</strong>
+      <small>Premium Digital Studio</small>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="estimator.html">Estimator</a>
+    <a href="audit.html">Free Audit</a>
+    <a href="before-after.html">Before / After</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="contact.html" class="nav-btn">Start Project</a>
+</header>
+
+<main>
+
+<section class="page-hero reveal">
+  <p class="label">AI Website Estimator</p>
+  <h1>Estimate your website project instantly.</h1>
+  <p>
+    Answer a few simple questions and get an estimated price, timeline and recommended package for your project.
+  </p>
+</section>
+
+<section class="section estimator-section reveal">
+
+  <div class="estimator-box">
+
+    <div class="estimator-form">
+
+      <label>Business Type</label>
+      <select id="businessType">
+        <option value="business">Business Website</option>
+        <option value="landing">Landing Page</option>
+        <option value="store">Online Store</option>
+        <option value="portfolio">Portfolio Website</option>
+        <option value="booking">Booking Website</option>
+      </select>
+
+      <label>Number of Pages</label>
+      <select id="pages">
+        <option value="1">1 page</option>
+        <option value="5">2-5 pages</option>
+        <option value="10">6-10 pages</option>
+        <option value="15">10+ pages</option>
+      </select>
+
+      <label>Extra Features</label>
+
+      <div class="check-row">
+        <input type="checkbox" id="seo">
+        <span>SEO Optimization</span>
+      </div>
+
+      <div class="check-row">
+        <input type="checkbox" id="logo">
+        <span>Logo / Branding</span>
+      </div>
+
+      <div class="check-row">
+        <input type="checkbox" id="shop">
+        <span>Online Payments / Store</span>
+      </div>
+
+      <div class="check-row">
+        <input type="checkbox" id="support">
+        <span>Monthly Support</span>
+      </div>
+
+      <button class="btn gold" onclick="calculateEstimate()">Calculate Estimate</button>
+    </div>
+
+    <div class="estimator-result">
+      <p class="label">Your Estimate</p>
+      <h2 id="price">€300 - €600</h2>
+      <p id="timeline">Estimated timeline: 7-14 days</p>
+      <p id="package">Recommended package: Premium Website</p>
+
+      <a href="contact.html" class="btn outline">Start This Project</a>
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div>
+    <h3>Elevate Web</h3>
+    <p>Premium websites for modern businesses.</p>
+  </div>
+
+  <div>
+    <p>Email: elevateweb26.1@gmail.com</p>
+    <p>Phone: 078443428</p>
+    <p>Location: Moldova / Worldwide</p>
+  </div>
+
+  <div>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
