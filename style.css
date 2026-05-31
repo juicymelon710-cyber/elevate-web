@@ -632,7 +632,7 @@ footer a{
 }
 
 .service-box ul li::before{
-  content:'•';
+  content:'\2022';
   position:absolute;
   left:0;
   color:#D4AF37;
@@ -818,7 +818,7 @@ footer a{
 }
 
 .pricing-card ul li::before{
-  content:'✓';
+  content:'\2713';
   position:absolute;
   left:0;
   color:#D4AF37;
@@ -1388,5 +1388,59 @@ main .cta .btn {
 
   .contact-cta p {
     font-size: 16px;
+  }
+}
+
+/* Final spacing and responsive polish */
+.page-hero {
+  padding: clamp(130px, 13vw, 190px) 8% clamp(72px, 8vw, 110px);
+}
+
+.page-hero h1 {
+  font-size: clamp(2.5rem, 5.8vw, 5rem);
+  line-height: 1.08;
+  max-width: 920px;
+}
+
+.page-hero p {
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.75;
+}
+
+main .cta {
+  padding: clamp(64px, 8vw, 90px) 8% clamp(60px, 7vw, 80px) !important;
+  row-gap: clamp(18px, 2.4vw, 28px) !important;
+}
+
+main .cta h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem) !important;
+  max-width: 900px !important;
+}
+
+main .cta p {
+  font-size: clamp(1rem, 1.3vw, 1.15rem) !important;
+  line-height: 1.7 !important;
+}
+
+.contact-cta {
+  padding: 72px 8% 76px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    padding: 100px 6% 64px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.35rem;
+  }
+
+  main .cta {
+    padding: 58px 6% 60px !important;
+  }
+
+  .contact-cta {
+    padding: 56px 6% 60px;
   }
 }
