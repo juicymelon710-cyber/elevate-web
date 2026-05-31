@@ -65,6 +65,7 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:24px;
   padding:25px 8%;
   position:fixed;
   top:0;
@@ -88,6 +89,8 @@ body{
   gap:15px;
   text-decoration:none;
   color:white;
+  flex:0 0 220px;
+  min-width:220px;
 }
 
 .logo span{
@@ -107,15 +110,21 @@ body{
 .logo strong{
   display:block;
   font-size:1rem;
+  line-height:1.2;
+  white-space:nowrap;
 }
 
 .logo small{
   color:#aaa;
+  line-height:1.4;
+  white-space:nowrap;
 }
 
 nav{
   display:flex;
-  gap:35px;
+  gap:28px;
+  flex:1;
+  justify-content:center;
 }
 
 nav a{
@@ -137,11 +146,34 @@ nav a:hover{
   border-radius:40px;
   font-weight:600;
   transition:0.3s;
+  margin-left:18px;
+  white-space:nowrap;
 }
 
 .nav-btn:hover{
   transform:translateY(-3px);
   box-shadow:0 0 30px rgba(212,175,55,0.4);
+}
+
+@media(max-width:1350px){
+  .navbar{
+    padding:22px 6%;
+    gap:18px;
+  }
+
+  .logo{
+    flex-basis:190px;
+    min-width:190px;
+  }
+
+  nav{
+    gap:20px;
+  }
+
+  .nav-btn{
+    margin-left:8px;
+    padding:13px 24px;
+  }
 }
 
 /* HERO */
@@ -2040,4 +2072,140 @@ main .cta p {
   .planner-result h2 {
     font-size: 2rem;
   }
+}
+/* BUSINESS GROWTH ROADMAP */
+
+.roadmap-section {
+  padding-top: 40px;
+}
+
+.roadmap-box {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 40px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 40px;
+  padding: 45px;
+  box-shadow: 0 0 45px rgba(212,175,55,0.12);
+}
+
+.roadmap-form label {
+  display: block;
+  margin: 20px 0 10px;
+  color: #D4AF37;
+  font-weight: 600;
+}
+
+.roadmap-form input,
+.roadmap-form select {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.05);
+  color: #F8F5EE;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.roadmap-form select option {
+  background: #071225;
+}
+
+.roadmap-result {
+  border: 1px solid #D4AF37;
+  border-radius: 35px;
+  padding: 45px;
+  background: rgba(212,175,55,0.04);
+}
+
+.roadmap-result h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.roadmap-card {
+  margin: 22px 0;
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.roadmap-card h3 {
+  color: #D4AF37;
+  margin-bottom: 12px;
+}
+
+.roadmap-card p,
+.roadmap-card li {
+  color: #c8c8c8;
+  line-height: 1.8;
+}
+
+.roadmap-card ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .roadmap-box {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .roadmap-result h2 {
+    font-size: 2rem;
+  }
+}
+/* ROADMAP PAGE */
+
+.roadmap-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:50px;
+}
+
+.roadmap-form,
+.roadmap-result{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(212,175,55,0.15);
+    border-radius:30px;
+    padding:35px;
+}
+
+.roadmap-form label{
+    display:block;
+    margin:18px 0 8px;
+    color:#d4af37;
+    font-weight:600;
+}
+
+.roadmap-form input,
+.roadmap-form select{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:none;
+    background:rgba(255,255,255,0.06);
+    color:white;
+    margin-bottom:10px;
+}
+
+.roadmap-result ul{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+.roadmap-result li{
+    margin-bottom:12px;
+}
+
+@media(max-width:900px){
+    .roadmap-box{
+        grid-template-columns:1fr;
+    }
 }

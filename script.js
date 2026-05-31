@@ -304,3 +304,127 @@ function generateWebsitePlan() {
     </div>
   `;
 }
+function generateRoadmap() {
+  const name = document.getElementById("roadmapName").value.trim() || "Your Business";
+  const industry = document.getElementById("roadmapIndustry").value;
+  const website = document.getElementById("roadmapWebsite").value;
+  const goal = document.getElementById("roadmapGoal").value;
+
+  let score = 72;
+  let packageName = "Premium Business Website";
+  let growth = "+35% more leads";
+  let actions = ["Modern Website Structure", "SEO Setup", "Contact Form Optimization", "Google Search Console Setup"];
+
+  if (website === "no") {
+    score = 48;
+    growth = "+60% stronger online presence";
+    actions.unshift("Create a Professional Website");
+  }
+
+  if (website === "old") {
+    score = 58;
+    growth = "+45% better trust and conversions";
+    actions.unshift("Website Redesign");
+  }
+
+  if (goal === "sales") {
+    packageName = "Sales-Focused Website";
+    actions.push("Conversion Strategy", "Product / Offer Sections");
+  }
+
+  if (goal === "premium") {
+    packageName = "Luxury Brand Website";
+    actions.push("Premium Visual Identity", "Brand Storytelling");
+  }
+
+  if (industry === "store") {
+    packageName = "Online Store";
+    actions.push("Product Catalog", "Checkout Experience");
+  }
+
+  document.getElementById("roadmapTitle").textContent = `${name} Digital Roadmap`;
+
+  document.getElementById("roadmapContent").innerHTML = `
+    <div class="roadmap-card">
+      <h3>Website Score</h3>
+      <p>${score}/100</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Recommended Package</h3>
+      <p>${packageName}</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Growth Potential</h3>
+      <p>${growth}</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Priority Actions</h3>
+      <ul>${actions.map(action => `<li>${action}</li>`).join("")}</ul>
+    </div>
+  `;
+}
+function generateRoadmap() {
+  const name = document.getElementById("roadmapName").value.trim() || "Your Business";
+  const industry = document.getElementById("roadmapIndustry").value;
+  const website = document.getElementById("roadmapWebsite").value;
+  const goal = document.getElementById("roadmapGoal").value;
+
+  let score = 72;
+  let packageName = "Premium Business Website";
+  let growth = "+35% more leads";
+  let actions = ["Modern Website Structure", "SEO Setup", "Contact Form Optimization", "Google Search Console Setup"];
+
+  if (website === "no") {
+    score = 48;
+    growth = "+60% stronger online presence";
+    actions.unshift("Create a Professional Website");
+  }
+
+  if (website === "old") {
+    score = 58;
+    growth = "+45% better trust and conversions";
+    actions.unshift("Website Redesign");
+  }
+
+  if (goal === "sales") {
+    packageName = "Sales-Focused Website";
+    actions.push("Conversion Strategy", "Product / Offer Sections");
+  }
+
+  if (goal === "premium") {
+    packageName = "Luxury Brand Website";
+    actions.push("Premium Visual Identity", "Brand Storytelling");
+  }
+
+  if (industry === "store") {
+    packageName = "Online Store";
+    actions.push("Product Catalog", "Checkout Experience");
+  }
+
+  document.getElementById("roadmapTitle").textContent = `${name} Digital Roadmap`;
+
+  document.getElementById("roadmapContent").innerHTML = `
+    <div class="roadmap-card">
+      <h3>Website Score</h3>
+      <p>${score}/100</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Recommended Package</h3>
+      <p>${packageName}</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Growth Potential</h3>
+      <p>${growth}</p>
+    </div>
+
+    <div class="roadmap-card">
+      <h3>Priority Actions</h3>
+      <ul>${actions.map(action => `<li>${action}</li>`).join("")}</ul>
+    </div>
+  `;
+}

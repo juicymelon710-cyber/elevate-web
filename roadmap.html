@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Business Growth Roadmap | Elevate Web</title>
+  <meta name="description" content="Generate a personalized digital growth roadmap for your business with Elevate Web.">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <span>EW</span>
+    <div>
+      <strong>Elevate Web</strong>
+      <small>Premium Digital Studio</small>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="resources.html">Resources</a>
+    <a href="roadmap.html">Roadmap</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="contact.html" class="nav-btn">Start Project</a>
+</header>
+
+<main>
+
+  <section class="page-hero reveal">
+    <p class="label">Business Growth Roadmap</p>
+    <h1>Discover your next digital growth opportunities.</h1>
+    <p>
+      Answer a few questions and receive a personalized roadmap for improving your online presence.
+    </p>
+  </section>
+
+  <section class="section roadmap-section reveal">
+    <div class="roadmap-box">
+
+      <div class="roadmap-form">
+        <label>Business Name</label>
+        <input type="text" id="roadmapName" placeholder="Example: Bella Beauty Studio">
+
+        <label>Industry</label>
+        <select id="roadmapIndustry">
+          <option value="restaurant">Restaurant / Cafe</option>
+          <option value="beauty">Beauty Salon</option>
+          <option value="medical">Medical Clinic</option>
+          <option value="store">Online Store</option>
+          <option value="realestate">Real Estate</option>
+          <option value="construction">Construction</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label>Do you already have a website?</label>
+        <select id="roadmapWebsite">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="old">Yes, but it looks outdated</option>
+        </select>
+
+        <label>Main Goal</label>
+        <select id="roadmapGoal">
+          <option value="clients">Get more clients</option>
+          <option value="trust">Build more trust</option>
+          <option value="sales">Increase sales</option>
+          <option value="premium">Look more premium</option>
+        </select>
+
+        <button class="btn gold" onclick="generateRoadmap()">Generate Roadmap</button>
+      </div>
+
+      <div class="roadmap-result">
+        <p class="label">Your Roadmap</p>
+        <h2 id="roadmapTitle">Your growth roadmap will appear here.</h2>
+
+        <div id="roadmapContent">
+          <p>Complete the form to generate your personalized roadmap.</p>
+        </div>
+
+        <a href="contact.html" class="btn outline">Start Growth Project</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>
+    <h3>Elevate Web</h3>
+    <p>Premium websites for modern businesses.</p>
+  </div>
+
+  <div>
+    <p>Email: elevateweb26.1@gmail.com</p>
+    <p>Phone: 078443428</p>
+    <p>Location: Moldova / Worldwide</p>
+  </div>
+
+  <div>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
