@@ -1323,6 +1323,42 @@ footer a{
   }
 }
 
+@media(max-width:768px){
+  .founder-section{
+    padding-top:24px;
+  }
+
+  .founder-card{
+    padding:30px 24px;
+    gap:24px;
+    border-radius:28px;
+    text-align:center;
+  }
+
+  .founder-avatar{
+    width:124px;
+    height:124px;
+    margin:0 auto;
+    font-size:2.25rem;
+    flex:0 0 124px;
+  }
+
+  .founder-card .label{
+    text-align:center;
+  }
+
+  .founder-card h2{
+    font-size:clamp(2rem, 10vw, 2.7rem);
+    line-height:1.12;
+    margin-bottom:18px;
+  }
+
+  .founder-card p{
+    font-size:0.95rem;
+    line-height:1.85;
+  }
+}
+
 /* CONTACT PAGE */
 
 .contact-layout{
