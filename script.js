@@ -55,7 +55,7 @@ if (contactForm) {
     window.ELEVATE_CONTACT_API_URL ||
     (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
       ? "http://localhost:3000/api/contact"
-      : "https://api.elevateweb.md/api/contact");
+      : "https://elevate-web-production.up.railway.app/api/contact");
 
   function showContactStatus(message, type) {
     if (!contactStatus) return;
