@@ -3012,3 +3012,23 @@ main .cta p {
     border-bottom: none;
   }
 }
+
+/* Mobile menu hard lock */
+@media (max-width: 768px) {
+  .logo span {
+    aspect-ratio: 1 / 1;
+    min-width: 44px;
+    min-height: 44px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  #mainMenu {
+    display: none !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  #mainMenu.active {
+    display: flex !important;
+  }
+}
