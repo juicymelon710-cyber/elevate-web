@@ -366,6 +366,11 @@ function generateRoadmap() {
     </div>
   `;
 }
+
+function toggleMenu() {
+  const menu = document.getElementById("mainMenu");
+  menu.classList.toggle("active");
+}
 function generateRoadmap() {
   const name = document.getElementById("roadmapName").value.trim() || "Your Business";
   const industry = document.getElementById("roadmapIndustry").value;
