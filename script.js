@@ -49,6 +49,20 @@ window.addEventListener("scroll", () => {
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
+  const contactStatus = contactForm.querySelector(".form-status");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const contactApiUrl =
+    window.ELEVATE_CONTACT_API_URL ||
+    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+      ? "http://localhost:3000/api/contact"
+      : "https://api.elevateweb.md/api/contact");
+
+  function showContactStatus(message, type) {
+    if (!contactStatus) return;
+    contactStatus.textContent = message;
+    contactStatus.className = `form-status ${type}`;
+  }
+
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -62,7 +76,13 @@ if (contactForm) {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/contact", {
+      showContactStatus("Sending your project request...", "loading");
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+      }
+
+      const response = await fetch(contactApiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,15 +90,31 @@ if (contactForm) {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json().catch(() => ({}));
+
       if (response.ok) {
-        alert("Message sent successfully!");
+        showContactStatus(
+          result.message || "Message sent successfully. We will contact you soon.",
+          "success"
+        );
         contactForm.reset();
       } else {
-        alert("Something went wrong.");
+        showContactStatus(
+          result.error || "Something went wrong. Please try again or contact us on Telegram.",
+          "error"
+        );
       }
     } catch (error) {
-      alert("Server connection error.");
+      showContactStatus(
+        "Server connection error. Please try again later or contact us directly on Telegram.",
+        "error"
+      );
       console.log(error);
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      }
     }
   });
 }
