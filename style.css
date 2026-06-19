@@ -63,10 +63,10 @@ body{
 .navbar{
   width:min(100% - 64px, 1640px);
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
-  gap:24px;
-  padding:25px 36px;
+  gap:20px;
+  padding:20px 28px;
   position:fixed;
   top:0;
   left:50%;
@@ -91,8 +91,8 @@ body{
   gap:15px;
   text-decoration:none;
   color:white;
-  flex:0 0 220px;
-  min-width:220px;
+  flex:0 0 250px;
+  min-width:250px;
 }
 
 .logo span{
@@ -124,9 +124,11 @@ body{
 
 nav{
   display:flex;
-  gap:28px;
+  gap:24px;
   flex:1;
   justify-content:center;
+  align-items:center;
+  min-width:0;
 }
 
 nav a{
@@ -134,27 +136,108 @@ nav a{
   color:white;
   transition:0.3s;
   position:relative;
+  font-size:0.98rem;
+  line-height:1.18;
+  text-align:center;
+}
+
+nav a:last-child{
+  display:none;
 }
 
 nav a:hover{
   color:#D4AF37;
 }
 
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex:0 0 auto;
+  justify-content:flex-end;
+  margin-left:10px;
+}
+
+.language-switch{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  padding:5px;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:999px;
+  background:rgba(255,255,255,0.04);
+}
+
+.language-switch a{
+  min-width:34px;
+  min-height:32px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  color:#d8d8d8;
+  text-decoration:none;
+  font-size:0.78rem;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.language-switch a:hover,
+.language-switch a.active{
+  background:#D4AF37;
+  color:#071225;
+}
+
 .nav-btn{
   text-decoration:none;
-  padding:14px 28px;
+  padding:13px 22px;
   background:#D4AF37;
   color:#071225;
   border-radius:40px;
   font-weight:600;
   transition:0.3s;
-  margin-left:18px;
+  margin-left:0;
   white-space:nowrap;
 }
 
 .nav-btn:hover{
   transform:translateY(-3px);
   box-shadow:0 0 30px rgba(212,175,55,0.4);
+}
+
+@media(max-width:1500px){
+  .navbar{
+    width:min(100% - 32px, 1500px);
+    gap:16px;
+    padding:18px 22px;
+  }
+
+  .logo{
+    flex-basis:230px;
+    min-width:230px;
+  }
+
+  nav{
+    gap:18px;
+  }
+
+  nav a{
+    font-size:0.92rem;
+  }
+
+  .language-switch a{
+    min-width:32px;
+  }
+
+  .nav-btn{
+    padding:12px 18px;
+  }
+}
+
+@media(max-width:1240px){
+  .navbar .nav-btn{
+    display:none;
+  }
 }
 
 @media(max-width:1350px){
@@ -165,17 +248,17 @@ nav a:hover{
   }
 
   .logo{
-    flex-basis:190px;
-    min-width:190px;
+    flex-basis:210px;
+    min-width:210px;
   }
 
   nav{
-    gap:20px;
+    gap:14px;
   }
 
   .nav-btn{
-    margin-left:8px;
-    padding:13px 24px;
+    margin-left:0;
+    padding:12px 18px;
   }
 }
 
@@ -823,6 +906,12 @@ footer a{
 
   .preview-sidebar{
     flex-direction:row;
+  }
+
+  .nav-actions{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
   }
 
   .cta h2{
@@ -3070,6 +3159,7 @@ main .cta p {
   }
 
   .navbar nav a:last-child {
+    display: block;
     border-bottom: none;
   }
 }
@@ -3091,5 +3181,22 @@ main .cta p {
 
   #mainMenu.active {
     display: flex !important;
+  }
+
+  .nav-actions {
+    width: auto;
+    flex: 0 0 auto;
+    order: 3;
+    justify-content: flex-start;
+  }
+
+  .language-switch {
+    padding: 4px;
+  }
+
+  .language-switch a {
+    min-width: 32px;
+    min-height: 30px;
+    font-size: 0.72rem;
   }
 }
