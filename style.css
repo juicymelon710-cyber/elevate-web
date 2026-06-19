@@ -141,7 +141,7 @@ nav a{
   text-align:center;
 }
 
-nav a:last-child{
+nav a[href="/contact/"]{
   display:none;
 }
 
@@ -3158,7 +3158,7 @@ main .cta p {
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
-  .navbar nav a:last-child {
+  .navbar nav a[href="/contact/"] {
     display: block;
     border-bottom: none;
   }
