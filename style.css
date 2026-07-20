@@ -289,12 +289,12 @@ nav a:hover{
 /* HERO */
 
 .hero{
-  min-height:100vh;
+  min-height:clamp(600px, 86vh, 820px);
   display:grid;
   grid-template-columns:1.1fr 0.9fr;
   align-items:center;
-  padding:180px 8% 100px;
-  gap:60px;
+  padding:clamp(120px, 12vw, 170px) 8% clamp(56px, 6vw, 90px);
+  gap:clamp(36px, 5vw, 60px);
   position:relative;
 }
 
@@ -534,14 +534,14 @@ nav a:hover{
 /* SECTIONS */
 
 .section{
-  padding:120px 8%;
+  padding:clamp(60px, 7vw, 96px) 8%;
 }
 
 .section h2{
   font-size:3.5rem;
   font-family:'Cinzel',serif;
   max-width:900px;
-  margin-bottom:60px;
+  margin-bottom:clamp(32px, 4vw, 48px);
 }
 
 .grid{
@@ -649,7 +649,7 @@ nav a:hover{
 }
 
 .process-section{
-  padding-top:80px;
+  padding-top:clamp(20px, 3vw, 36px);
 }
 
 .process-timeline{
